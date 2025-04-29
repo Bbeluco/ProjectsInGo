@@ -1,6 +1,4 @@
 ID, TASK, TIMESTAMP
-
-4,adicionar incremento no id,09-03-25047
-4,corrigir questao de timestamp,09-03-25047
-4,Permitir que o usuario delete um item especifico,09-03-25047
-4,Criar um help,09-03-25047
+1, mock, 00-00-0000
+2,Criar um help,04-28-2025
+3,Permitir que o usuario remova uma linha,04-28-2025
