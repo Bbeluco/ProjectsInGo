@@ -100,6 +100,34 @@ func help() {
 	fmt.Println("Remove an entry from the list")
 }
 
+func remove() {
+	taskId := os.Args[2]
+	records, err := fileReader();
+	if err != nil {
+		return;
+	}
+
+	file, err := os.OpenFile("database.csv", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644);
+	if err != nil {
+		fmt.Println("Error whilee oppening database to remove data")
+	}
+	defer file.Close();
+
+	writer := csv.NewWriter(file);
+	defer writer.Flush();
+
+	for _, eachrecord := range records{
+		if(eachrecord[0] != taskId) {
+			fmt.Println(eachrecord);
+			if err := writer.Write(eachrecord); err != nil {
+				panic(err)
+			}
+		}
+	}
+
+	fmt.Printf("Task %v sucessfully removed :)\n", taskId)
+}
+
 func main() {
 	switch option := os.Args[1]; option {
 		case "add":
@@ -108,6 +136,8 @@ func main() {
 			list();
 		case "help":
 			help();
+		case "remove":
+			remove();
 		default:
 			fmt.Println("Option not found, please try again")
 	}

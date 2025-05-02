@@ -1,4 +1,5 @@
-ID, TASK, TIMESTAMP
-1, mock, 00-00-0000
-2,Criar um help,04-28-2025
-3,Permitir que o usuario remova uma linha,04-28-2025
+ID," TASK"," TIMESTAMP"
+2,create a help command,04-28-2025
+3,allow users to remove an entry,04-28-2025
+7,take a shower,04-30-2025
+8,talk with gpt,04-30-2025
