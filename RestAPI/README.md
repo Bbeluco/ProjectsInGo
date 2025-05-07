@@ -1,0 +1,2 @@
+# Goal
+Here, I have the goal to create a web API. At first I want to just keep it as simple as possible, creating one single endpoint that returns to me a static information. After this step goes in a sucessful way I want to create a simple calculator, this calculator API, this idea is based on (this repo)[https://github.com/dreamsofcode-io/goprojects/tree/main/02-backend-api]
